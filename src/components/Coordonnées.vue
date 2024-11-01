@@ -1,5 +1,5 @@
 <template>
-    <h3 id="email">{{ email }}</h3>
+    <h3 id="email" >{{ email }} </h3>
     <h3>{{ telephone }}</h3>
     <h3>{{ adresse.numero }} {{ adresse.rue }} <br>
         <span id="ville">{{ adresse.ville }}</span> {{ adresse.province }} <br>

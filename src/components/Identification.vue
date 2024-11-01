@@ -8,9 +8,14 @@
 
 <script>
 export default {
+    props: {
+        nom:{
+            type: String,
+            required: true,
+        },
+    },
     data() {
         return {
-            nom: "Laroche",
             prenom: "Pierre",
             photo: "https://randomuser.me/api/portraits/men/79.jpg",
         };
