@@ -1,22 +1,16 @@
 <template>
-    <img id="photo" :src="photo" alt="photo de profil" class="photo" />
+    <img id="photo" :src="photo" :alt="propNom" class="photo" />
 
-    <h1> <span id="prenom">{{ prenom }}</span> <span id="nom">{{ nom }}</span>
+    <h1> {{ propNom }}
     </h1>
 
 </template>
 
 <script>
 export default {
-    props: {
-        nom:{
-            type: String,
-            required: true,
-        },
-    },
+    props: ['propNom'],
     data() {
         return {
-            prenom: "Pierre",
             photo: "https://randomuser.me/api/portraits/men/79.jpg",
         };
     },

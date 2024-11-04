@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="(hobby, index) in hobbies" :key="index" :id="'hobby' + (index + 1)" class="hobby">
+        <div v-for="(hobby, index) in hobbies" class="hobby">
             <span>{{ hobby }}</span>
         </div>
     </div>

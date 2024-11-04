@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div class="carte">
-      <Identification :nom="nom" />
-      <Coordonnées />
+      <Identification :propNom="nom" />
+      <Coordonnées @modification="gestionMessage" />
       <Hobbies />
     </div>
 
-    <button @click=changerNom()>Changer le nom</button>
+    <button @click=modifierNom()>Changer le nom</button>
   </div>
 </template>
 
@@ -24,21 +24,21 @@ export default {
   },
   data() {
     return {
-      nom: "Laroche",
-      prenom: "Pierre",
+      nom: "",
+      prenom: "",
     };
   },
-  methods: {
-    changerNom() {
-      const nouveauNom = prompt("Entrez un nouveau nom");
-      if (nouveauNom) {
-        this.nom = nouveauNom;
-        console.log(this.nom);
-        
+  methods:{
+    modifierNom(){
+      this.nom = prompt("Entrez le nom")
+      },
+      gestionMessage(nouveauMessage)
+      {
+        this.message = nouveauMessage
       }
-    },
-  },
-}
+    }
+  }
+  
 </script>
 
 
@@ -55,12 +55,12 @@ export default {
 }
 
 .carte h1 {
-    text-align: center;
-    border-bottom: 1px solid white;
-    margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
 }
 
 .carte h3 {
-    text-align: center;
+  text-align: center;
 }
 </style>
